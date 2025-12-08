@@ -1,0 +1,9 @@
+# .gitignore
+.env
+chroma_db/
+chroma_db_final/
+*.bin
+*.pickle
+*.db
+
+# other ignored files or directories
