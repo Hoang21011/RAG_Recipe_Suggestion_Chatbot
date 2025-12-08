@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+chromadb
+google-generativeai
+python-dotenv
+tqdm
