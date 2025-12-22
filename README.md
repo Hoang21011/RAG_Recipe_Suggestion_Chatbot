@@ -55,65 +55,7 @@ The system retrieves relevant recipes from a vector database and generates natur
 
 ## 📂 Retrieval-Augmented Generation (RAG) Pipeline Structure
 
-                            +-------------------+
-                            |       User        |
-                            |  (Chat Interface) |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------+
-                            |   app.py / API    |
-                            |  (User Request)  |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------+
-                            |  Query Embedder   |
-                            |  rag/embedder.py  |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------------------+
-                            |   Vector Database (FAISS)     |
-                            |  - Recipe Embeddings          |
-                            |  - built by                   |
-                            |    buiding_vector_database.py |
-                            +---------+---------------------+
-                                      |
-                                      v
-                            +-------------------+
-                            |   Retriever       |
-                            |  rag/retriever.py|
-                            |  (Top-k Recipes) |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------------------+
-                            |     Prompt Construction       |
-                            |  - Retrieved Recipes          |
-                            |  - User Query                 |
-                            |  - Conversation Memory        |
-                            +---------+---------------------+
-                                      |
-                                      v
-                            +-------------------+
-                            |    Generator      |
-                            |  rag/generator.py|
-                            |  (LLM Response)  |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------+
-                            |     Memory        |
-                            |   rag/memory.py  |
-                            | (Chat History)   |
-                            +---------+---------+
-                                      |
-                                      v
-                            +-------------------+
-                            |   Final Response  |
-                            |  Recipe Suggestion|
-                            +-------------------+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/cac583d2-924e-4b2f-9589-a2c18122b164" />
 
 ---
 
@@ -172,7 +114,7 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_api_key_here
 ```
 
 ---
